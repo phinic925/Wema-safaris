@@ -75,7 +75,7 @@ const Discover = () => {
 
               {/* Location Tag */}
               <div className="flex items-center gap-1.5 text-gray-500 text-xs font-semibold mb-1">
-                <MapPin size={14} className="text-[#E87A38]" />
+                <MapPin size={14} className="text-[#F36F0F]" />
                 <span>{item.location}</span>
               </div>
 
@@ -85,7 +85,7 @@ const Discover = () => {
               </h3>
 
               {/* Orange Price Bar */}
-              <div className="w-full bg-[#E87A38] rounded-2xl py-3 px-5 flex justify-between items-center text-white mt-auto hover:bg-orange-600 transition-colors">
+              <div className="w-full bg-[#F36F0F] rounded-2xl py-3 px-5 flex justify-between items-center text-white mt-auto hover:bg-orange-600 transition-colors">
                 <div className="flex items-baseline gap-1">
                   <span className="text-lg font-bold">${item.price}</span>
                   <span className="text-xs opacity-90">/person</span>

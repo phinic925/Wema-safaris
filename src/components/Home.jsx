@@ -3,12 +3,12 @@ import { ArrowRight, Flower, Asterisk } from 'lucide-react';
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-[#F9F8F6] font-sans selection:bg-[#E87A38] selection:text-white overflow-hidden pt-16">
+    <div className="min-h-screen bg-[#F9F8F6] font-sans selection:bg-[#F36F0F] selection:text-white overflow-hidden">
       
       <main className="max-w-7xl mx-auto px-6 mt-12 lg:mt-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
-          {/* Left Column */}
+          {/* ================= LEFT COLUMN ================= */}
           <div className="relative">
             
             {/* Title Line 1 */}
@@ -17,7 +17,7 @@ const Home = () => {
                 EXPLORE
               </h1>
 
-              {/* Badge - Positioned on the far right, completely clear of the text */}
+              {/* Badge - Positioned on the far right */}
               <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden md:flex items-center z-20">
                 <img 
                   src="https://images.unsplash.com/photo-1506461883276-594a12b11cf3?q=80&w=200&auto=format&fit=crop" 
@@ -33,7 +33,7 @@ const Home = () => {
                       </textPath>
                     </text>
                   </svg>
-                  <div className="w-8 h-8 bg-[#E87A38] rounded-full flex items-center justify-center z-10">
+                  <div className="w-8 h-8 bg-[#F36F0F] rounded-full flex items-center justify-center z-10">
                      <div className="w-0 h-0 border-t-[5px] border-t-transparent border-l-[8px] border-l-white border-b-[5px] border-b-transparent ml-1"></div>
                   </div>
                 </div>
@@ -43,7 +43,7 @@ const Home = () => {
             {/* Title Line 2 */}
             <div className="flex items-center gap-6 mt-2 md:mt-4">
               {/* Orange Arrow Shape */}
-              <div className="w-28 h-14 md:w-36 md:h-20 bg-[#E87A38] rounded-full rounded-bl-none relative shadow-lg shadow-orange-500/20 hidden sm:block">
+              <div className="w-28 h-14 md:w-36 md:h-20 bg-[#F36F0F] rounded-full rounded-bl-none relative shadow-lg shadow-orange-500/20 hidden sm:block">
                 <ArrowRight className="text-white absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 md:w-8 md:h-8" />
               </div>
               <h1 className="text-6xl md:text-8xl lg:text-[100px] font-black uppercase tracking-tighter leading-none text-black">
@@ -64,33 +64,39 @@ const Home = () => {
 
           </div>
 
-          {/* Right Column (Arch Image) */}
-          <div className="relative flex justify-center items-end mt-12 lg:mt-0">
-            {/* Curved Text SVG */}
-            <div className="absolute -top-12 w-[120%] h-[120%] pointer-events-none flex justify-center items-center">
-              <svg viewBox="0 0 500 500" className="w-[550px] h-[550px] md:w-[650px] md:h-[650px]">
-                <path 
-                  id="text-arc" 
-                  d="M 50, 250 A 200,200 0 0,1 450,250" 
-                  fill="transparent" 
-                />
-                <text className="text-[14px] md:text-[16px] font-semibold tracking-[0.3em] uppercase fill-[#111]">
-                  <textPath href="#text-arc" startOffset="50%" textAnchor="middle">
-                    FIND THE BEST PLACE TO TRAVEL AND RELAX YOURSELF
-                  </textPath>
-                </text>
-              </svg>
-            </div>
+          {/* ================= RIGHT COLUMN - DOME SHAPE ================= */}
+          <div className="relative flex justify-center items-end mt-12 lg:mt-0 pt-16">
             
-            {/* Arch Image Container */}
-            <div className="w-[300px] h-[400px] md:w-[400px] md:h-[500px] rounded-t-full overflow-hidden border-[6px] border-[#F9F8F6] shadow-2xl relative z-10">
-              <img 
-                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop" 
-                alt="Beach Resort" 
-                className="w-full h-full object-cover"
-              />
+            {/* Wrapper holds image + SVG together so they align perfectly */}
+            <div className="relative">
+              
+              {/* Curved Text SVG - Sits exactly on top of the dome edge */}
+              <div className="absolute -top-14 left-1/2 -translate-x-1/2 w-[520px] md:w-[620px] flex justify-center z-20 pointer-events-none">
+                <svg viewBox="0 0 500 300" className="w-full h-auto">
+                  <path 
+                    id="text-arc" 
+                    d="M 50, 250 A 200,200 0 0,1 450,250" 
+                    fill="transparent" 
+                  />
+                  <text className="text-[12px] md:text-[14px] font-semibold tracking-[0.3em] uppercase fill-[#111]">
+                    <textPath href="#text-arc" startOffset="50%" textAnchor="middle">
+                      FIND THE BEST PLACE TO TRAVEL AND RELAX YOURSELF
+                    </textPath>
+                  </text>
+                </svg>
+              </div>
+              
+              {/* Dome Image Container */}
+              <div className="w-[400px] h-[400px] md:w-[500px] md:h-[500px] rounded-t-full overflow-hidden border-t-[8px] border-l-[8px] border-r-[8px] border-[#F9F8F6] shadow-2xl relative z-10">
+                <img 
+                  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=800&auto=format&fit=crop" 
+                  alt="Beach Resort" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
           </div>
+
         </div>
 
         {/* ================= BOTTOM SECTION ================= */}
@@ -125,7 +131,7 @@ const Home = () => {
               <h3 className="text-xl font-bold mb-2 text-black">Our story</h3>
               <p className="text-gray-500 text-sm max-w-[220px] leading-relaxed">Travel is the movement of people between distant geographical locations.</p>
             </div>
-            <div className="w-16 h-16 bg-[#E87A38] rounded-full rounded-bl-none flex items-center justify-center shrink-0 shadow-lg shadow-orange-500/20 cursor-pointer hover:bg-orange-600 transition-colors">
+            <div className="w-16 h-16 bg-[#F36F0F] rounded-full rounded-bl-none flex items-center justify-center shrink-0 shadow-lg shadow-orange-500/20 cursor-pointer hover:bg-orange-600 transition-colors">
                <ArrowRight className="text-white w-6 h-6" />
             </div>
           </div>
