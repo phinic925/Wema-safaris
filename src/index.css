@@ -1,0 +1,5 @@
+html {
+  scroll-behavior: smooth;
+  /* This offset prevents the fixed navbar from covering the top of the section when scrolled to */
+  scroll-padding-top: 100px; 
+}
